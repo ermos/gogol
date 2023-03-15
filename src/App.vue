@@ -6,6 +6,7 @@ import {reactive} from "vue";
 
 const data = reactive({
   notification: false,
+  scaleBtn: false,
 })
 </script>
 
@@ -13,9 +14,9 @@ const data = reactive({
   <div class="header">
     <img src="./assets/images/logo.svg" />
   </div>
-  <search-bar />
+  <search-bar @end="data.scaleBtn = true"/>
   <div class="btn-group">
-    <submit-btn @click="data.notification = true" value="Recherche Google" aria-label="Recherche Google" />
+    <submit-btn @click="data.notification = true" value="Recherche Google" aria-label="Recherche Google" :class="{ 'scale': data.scaleBtn }" />
     <submit-btn @click="data.notification = true" value="J'ai de la chance" aria-label="J'ai de la chance" />
   </div>
   <audio id="notification" src="/notification.mp3"></audio>

@@ -22,5 +22,27 @@
   text-align: center;
   cursor: pointer;
   user-select: none;
+
+  &.scale {
+    transform: scale(1.4);
+    box-shadow: 0 0 10px #fff;
+    color: #fff;
+    background-color: #319a6e;
+    border: 1px solid #319a6e;
+    transition: all ease-in-out 200ms;
+    animation: animation-scale 2000ms ease-in-out infinite;
+  }
+}
+
+@keyframes animation-scale {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 </style>
