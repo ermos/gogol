@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import "https://i.icomoon.io/public/temp/5a74a685f0/gogole/style.css";
+
+@import "modules/reset";
+
+:root {
+  --interface-size: 1200px;
+  --spacing-small: 5px;
+  --spacing-little: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.84);
+  background-color: #fff;
+}
+
+body, input {
+  font-family:
+          "Open Sans",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen-Sans,
+          Ubuntu,
+          Cantarell,
+          "Helvetica Neue",
+          sans-serif;
+}
