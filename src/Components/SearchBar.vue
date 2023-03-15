@@ -4,6 +4,7 @@ import MicIcon from "./MicIcon.vue";
 import CamIcon from "./CamIcon.vue";
 import {reactive, onMounted, ref} from "vue";
 import FakeCursor from "./FakeCursor.vue";
+import Notification from "./Notification.vue";
 
 const input = ref();
 
@@ -13,7 +14,7 @@ const data = reactive({
     display: true,
     x: -100,
     y: -100,
-  }
+  },
 });
 
 onMounted(() => {
@@ -65,8 +66,6 @@ function typing(message) {
     nextTimer = nextTimer + 80;
     setTimeout(() => data.message += letter, nextTimer);
   })
-
-  setTimeout(() => () => console.log("trigger"), nextTimer)
 }
 </script>
 

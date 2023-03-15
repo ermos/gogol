@@ -1,6 +1,12 @@
 <script setup>
 import SearchBar from "./Components/SearchBar.vue";
 import SubmitBtn from "./Components/SubmitBtn.vue";
+import Notification from "./Components/Notification.vue";
+import {reactive} from "vue";
+
+const data = reactive({
+  notification: false,
+})
 </script>
 
 <template>
@@ -9,11 +15,11 @@ import SubmitBtn from "./Components/SubmitBtn.vue";
   </div>
   <search-bar />
   <center>
-
-    <submit-btn value="Recherche Google" aria-label="Recherche Google" />
-    <submit-btn value="J'ai de la chance" aria-label="J'ai de la chance" />
-
+    <submit-btn @click="data.notification = true" value="Recherche Google" aria-label="Recherche Google" />
+    <submit-btn @click="data.notification = true" value="J'ai de la chance" aria-label="J'ai de la chance" />
     </center>
+  <audio id="notification" src="/notification.mp3"></audio>
+  <notification v-if="data.notification" />
 </template>
 
 <style lang="scss">
