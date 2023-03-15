@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-@import "https://i.icomoon.io/public/temp/5a74a685f0/gogole/style.css";
-
 @import "modules/reset";
 
 :root {
@@ -17,15 +14,9 @@ body {
 }
 
 body, input {
-  font-family:
-          "Open Sans",
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Oxygen-Sans,
-          Ubuntu,
-          Cantarell,
-          "Helvetica Neue",
-          sans-serif;
+  font-family: arial,sans-serif;
+}
+
+body, html {
+  height: 100%;
 }
