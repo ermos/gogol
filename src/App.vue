@@ -14,10 +14,10 @@ const data = reactive({
     <img src="./assets/images/logo.svg" />
   </div>
   <search-bar />
-  <center>
+  <div class="btn-group">
     <submit-btn @click="data.notification = true" value="Recherche Google" aria-label="Recherche Google" />
     <submit-btn @click="data.notification = true" value="J'ai de la chance" aria-label="J'ai de la chance" />
-    </center>
+  </div>
   <audio id="notification" src="/notification.mp3"></audio>
   <notification v-if="data.notification" />
 </template>
@@ -32,5 +32,11 @@ const data = reactive({
   align-items: flex-end;
   justify-content: center;
   height: calc(100% - 560px);
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
