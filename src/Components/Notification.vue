@@ -1,11 +1,11 @@
 <script setup>
-import {onBeforeMount, onMounted, ref} from "vue";
+import {onMounted, ref} from "vue";
 
 const show = ref(false);
 
 onMounted(() => {
   document.getElementById("notification").play().then(() => {
-    setTimeout(() => show.value = true, 300);
+    setTimeout(() => show.value = true, 150);
   });
 })
 </script>
